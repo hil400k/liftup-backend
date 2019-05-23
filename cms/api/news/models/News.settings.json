@@ -1,0 +1,23 @@
+{
+  "connection": "default",
+  "collectionName": "news",
+  "info": {
+    "name": "news",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "default": "",
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "default": "",
+      "type": "text",
+      "required": true
+    }
+  }
+}

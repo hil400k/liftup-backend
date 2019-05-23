@@ -1,0 +1,25 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "plan",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "squats": {
+      "default": "",
+      "type": "integer"
+    },
+    "press": {
+      "default": "",
+      "type": "integer"
+    },
+    "deadlift": {
+      "default": "",
+      "type": "integer"
+    }
+  }
+}
