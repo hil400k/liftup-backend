@@ -49,7 +49,7 @@
       "plugin": "users-permissions",
       "configurable": false
     },
-    "plan": {
+    "planId": {
       "model": "plan"
     }
   },
