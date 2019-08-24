@@ -1,0 +1,34 @@
+{
+  "connection": "default",
+  "collectionName": "workouts",
+  "info": {
+    "name": "workout",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "date": {
+      "default": "",
+      "type": "date"
+    },
+    "name": {
+      "default": "",
+      "type": "string",
+      "required": true
+    },
+    "customPlan": {
+      "model": "customplan",
+      "via": "workouts"
+    },
+    "exercises": {
+      "collection": "exercise",
+      "via": "workout"
+    },
+    "isOpen": {
+      "default": false,
+      "type": "boolean"
+    }
+  }
+}

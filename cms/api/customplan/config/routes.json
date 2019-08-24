@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/customplans",
+      "handler": "Customplan.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/customplans/count",
+      "handler": "Customplan.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/customplans/:_id",
+      "handler": "Customplan.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/customplans",
+      "handler": "Customplan.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/customplans/:_id",
+      "handler": "Customplan.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/customplans/:_id",
+      "handler": "Customplan.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

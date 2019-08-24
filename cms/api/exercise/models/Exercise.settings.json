@@ -1,0 +1,30 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "exercise",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "default": "",
+      "type": "string",
+      "required": true
+    },
+    "isDone": {
+      "default": false,
+      "type": "boolean"
+    },
+    "sets": {
+      "default": "",
+      "type": "string"
+    },
+    "workout": {
+      "model": "workout",
+      "via": "exercises"
+    }
+  }
+}
