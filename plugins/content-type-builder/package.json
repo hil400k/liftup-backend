@@ -1,16 +1,16 @@
 {
-  "_from": "strapi-plugin-upload@3.0.0-alpha.23.1",
-  "_id": "strapi-plugin-upload@3.0.0-alpha.23.1",
+  "_from": "strapi-plugin-content-type-builder@3.0.0-alpha.23.1",
+  "_id": "strapi-plugin-content-type-builder@3.0.0-alpha.23.1",
   "_inBundle": false,
-  "_integrity": "sha512-cRGHeBzMj2Tny3jM6AHAE9OeNvGloD+gtaEyxontY+ur2mC/WbiirVOKqhBdT0dYbXkKYznDvgAeV/HO7765gA==",
-  "_location": "/strapi-plugin-upload",
+  "_integrity": "sha512-1onHOnPlDGyvCt9YBF49oVtpkpMC0Ysd3rOn44eCIqwS6iWou7x0QTWJKkqtrt2b3i3zl4lFDQ5n8qnxDbm+/Q==",
+  "_location": "/strapi-plugin-content-type-builder",
   "_phantomChildren": {},
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "strapi-plugin-upload@3.0.0-alpha.23.1",
-    "name": "strapi-plugin-upload",
-    "escapedName": "strapi-plugin-upload",
+    "raw": "strapi-plugin-content-type-builder@3.0.0-alpha.23.1",
+    "name": "strapi-plugin-content-type-builder",
+    "escapedName": "strapi-plugin-content-type-builder",
     "rawSpec": "3.0.0-alpha.23.1",
     "saveSpec": null,
     "fetchSpec": "3.0.0-alpha.23.1"
@@ -18,21 +18,27 @@
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "https://registry.npmjs.org/strapi-plugin-upload/-/strapi-plugin-upload-3.0.0-alpha.23.1.tgz",
-  "_shasum": "1ce4dfd13ac947eff4ee61e47a4a3db71fd1ee57",
-  "_spec": "strapi-plugin-upload@3.0.0-alpha.23.1",
-  "_where": "/Users/dima/Documents/dev/liftup-backend/cms",
+  "_resolved": "https://registry.npmjs.org/strapi-plugin-content-type-builder/-/strapi-plugin-content-type-builder-3.0.0-alpha.23.1.tgz",
+  "_shasum": "fbc75440106dd73b0b81d265a9046ed357aebe63",
+  "_spec": "strapi-plugin-content-type-builder@3.0.0-alpha.23.1",
+  "_where": "/Users/dima/Documents/dev/liftup-backend",
   "author": {
-    "name": "A Strapi developer"
+    "name": "Strapi team",
+    "email": "hi@strapi.io",
+    "url": "http://strapi.io"
+  },
+  "bugs": {
+    "url": "https://github.com/strapi/strapi/issues"
   },
   "bundleDependencies": false,
   "dependencies": {
-    "strapi-provider-upload-local": "3.0.0-alpha.23.1",
-    "stream-to-array": "^2.3.0",
-    "uuid": "^3.2.1"
+    "immutable": "^3.8.2",
+    "pluralize": "^7.0.0",
+    "strapi-generate": "3.0.0-alpha.23.1",
+    "strapi-generate-api": "3.0.0-alpha.23.1"
   },
   "deprecated": false,
-  "description": "This is the description of the plugin.",
+  "description": "Strapi plugin to create content type (API).",
   "devDependencies": {
     "strapi-helper-plugin": "3.0.0-alpha.23.1"
   },
@@ -40,13 +46,20 @@
     "node": ">= 10.0.0",
     "npm": ">= 6.0.0"
   },
+  "homepage": "https://github.com/strapi/strapi#readme",
   "license": "MIT",
   "maintainers": [
     {
-      "name": "A Strapi developer"
+      "name": "Strapi team",
+      "email": "hi@strapi.io",
+      "url": "http://strapi.io"
     }
   ],
-  "name": "strapi-plugin-upload",
+  "name": "strapi-plugin-content-type-builder",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/strapi/strapi.git"
+  },
   "scripts": {
     "analyze": "node ./node_modules/strapi-helper-plugin/lib/internals/scripts/analyze.js",
     "analyze:clean": "node ./node_modules/strapi-helper-plugin/node_modules/.bin/rimraf stats.json",
@@ -62,9 +75,9 @@
     "test": "echo \"Error: no test specified\""
   },
   "strapi": {
-    "name": "Files Upload",
-    "icon": "cloud-upload",
-    "description": "Description of upload plugin."
+    "name": "Content Type Builder",
+    "icon": "paint-brush",
+    "description": "content-type-builder.plugin.description"
   },
   "version": "3.0.0-alpha.23.1"
 }
