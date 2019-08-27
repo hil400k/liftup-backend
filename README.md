@@ -13,3 +13,6 @@ to run mongo
 
 NODE_ENV=production npm run start
 
+git push heroku master
+
+heroku logs --tail
