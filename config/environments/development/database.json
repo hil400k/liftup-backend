@@ -4,14 +4,12 @@
     "default": {
       "connector": "strapi-hook-mongoose",
       "settings": {
-        "client": "mongo",
-        "host": "127.0.0.1",
-        "port": 27017,
-        "database": "cms",
-        "username": "",
-        "password": ""
+        "uri": "mongodb+srv://hil400k:<pswd>@liftup-6tptg.mongodb.net/test?retryWrites=true&w=majority"
       },
-      "options": {}
+      "options": {
+        "ssl": true
+      }
     }
   }
 }
+
