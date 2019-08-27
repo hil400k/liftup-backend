@@ -1,6 +1,6 @@
 {
   "host": "${process.env.APP_HOST || 'liftup-backend.herokuapp.com'}",
-  "port": "${process.env.NODE_PORT || 1337 }",
+  "port": "${process.env.NODE_PORT || 1111 }",
   "production": true,
   "proxy": {
     "enabled": false
