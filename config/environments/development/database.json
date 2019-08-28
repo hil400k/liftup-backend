@@ -4,7 +4,8 @@
     "default": {
       "connector": "strapi-hook-mongoose",
       "settings": {
-        "uri": "mongodb+srv://hil400k:9559355d@liftup-6tptg.mongodb.net/test?retryWrites=true&w=majority"
+        "database": "strapi",
+        "uri": "mongodb://hil400k:9559355d@liftup-shard-00-00-6tptg.mongodb.net:27017,liftup-shard-00-01-6tptg.mongodb.net:27017,liftup-shard-00-02-6tptg.mongodb.net:27017/test?ssl=true&replicaSet=liftup-shard-0&authSource=admin&retryWrites=true"
       },
       "options": {
         "ssl": true
