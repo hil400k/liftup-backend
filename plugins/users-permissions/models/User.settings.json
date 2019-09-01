@@ -48,9 +48,6 @@
       "via": "users",
       "plugin": "users-permissions",
       "configurable": false
-    },
-    "planId": {
-      "model": "plan"
     }
   },
   "collectionName": "users-permissions_user"

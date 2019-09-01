@@ -22,13 +22,13 @@
       "default": "",
       "type": "json"
     },
-    "creator": {
-      "model": "user",
-      "plugin": "users-permissions"
-    },
     "workouts": {
       "collection": "workout",
       "via": "customPlan"
+    },
+    "creator": {
+      "model": "user",
+      "plugin": "users-permissions"
     }
   }
 }

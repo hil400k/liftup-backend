@@ -11,15 +11,20 @@
   "attributes": {
     "squats": {
       "default": "",
-      "type": "integer"
+      "type": "string"
     },
     "press": {
       "default": "",
-      "type": "integer"
+      "type": "string"
     },
     "deadlift": {
       "default": "",
-      "type": "integer"
+      "type": "string"
+    },
+    "creator": {
+      "unique": true,
+      "model": "user",
+      "plugin": "users-permissions"
     }
   }
 }
