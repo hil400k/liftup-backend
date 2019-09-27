@@ -29,6 +29,10 @@
     "creator": {
       "model": "user",
       "plugin": "users-permissions"
+    },
+    "type": {
+      "default": "",
+      "type": "string"
     }
   }
 }
