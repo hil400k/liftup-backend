@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/customplans",
-      "handler": "Customplan.find",
+      "path": "/plansheikos",
+      "handler": "Plansheiko.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/customplans/count",
-      "handler": "Customplan.count",
+      "path": "/plansheikos/count",
+      "handler": "Plansheiko.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/customplans/:_id",
-      "handler": "Customplan.findOne",
+      "path": "/plansheikos/:_id",
+      "handler": "Plansheiko.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/customplans",
-      "handler": "Customplan.create",
+      "path": "/plansheikos",
+      "handler": "Plansheiko.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/customplans/:_id",
-      "handler": "Customplan.update",
+      "path": "/plansheikos/:_id",
+      "handler": "Plansheiko.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/customplans/:_id",
-      "handler": "Customplan.destroy",
+      "path": "/plansheikos/:_id",
+      "handler": "Plansheiko.destroy",
       "config": {
         "policies": []
       }

@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Exercise.js service
+ * Plansheiko.js service
  *
  * @description: A set of functions similar to controller's actions to avoid code duplication.
  */
@@ -12,21 +12,21 @@ const _ = require('lodash');
 module.exports = {
 
   /**
-   * Promise to fetch all exercises.
+   * Promise to fetch all plansheikos.
    *
    * @return {Promise}
    */
 
   fetchAll: (params) => {
     // Convert `params` object to filters compatible with Mongo.
-    const filters = strapi.utils.models.convertParams('exercise', params);
+    const filters = strapi.utils.models.convertParams('plansheiko', params);
     // Select field to populate.
-    const populate = Exercise.associations
+    const populate = Plansheiko.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
-    return Exercise
+    return Plansheiko
       .find()
       .where(filters.where)
       .sort(filters.sort)
@@ -36,90 +36,90 @@ module.exports = {
   },
 
   /**
-   * Promise to fetch a/an exercise.
+   * Promise to fetch a/an plansheiko.
    *
    * @return {Promise}
    */
 
   fetch: (params) => {
     // Select field to populate.
-    const populate = Exercise.associations
+    const populate = Plansheiko.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
-    return Exercise
-      .findOne(_.pick(params, _.keys(Exercise.schema.paths)))
+    return Plansheiko
+      .findOne(_.pick(params, _.keys(Plansheiko.schema.paths)))
       .populate(populate);
   },
 
   /**
-   * Promise to count exercises.
+   * Promise to count plansheikos.
    *
    * @return {Promise}
    */
 
   count: (params) => {
     // Convert `params` object to filters compatible with Mongo.
-    const filters = strapi.utils.models.convertParams('exercise', params);
+    const filters = strapi.utils.models.convertParams('plansheiko', params);
 
-    return Exercise
+    return Plansheiko
       .countDocuments()
       .where(filters.where);
   },
 
   /**
-   * Promise to add a/an exercise.
+   * Promise to add a/an plansheiko.
    *
    * @return {Promise}
    */
 
   add: async (values) => {
     // Extract values related to relational data.
-    const relations = _.pick(values, Exercise.associations.map(ast => ast.alias));
-    const data = _.omit(values, Exercise.associations.map(ast => ast.alias));
+    const relations = _.pick(values, Plansheiko.associations.map(ast => ast.alias));
+    const data = _.omit(values, Plansheiko.associations.map(ast => ast.alias));
 
     // Create entry with no-relational data.
-    const entry = await Exercise.create(data);
+    const entry = await Plansheiko.create(data);
 
     // Create relational data and return the entry.
-    return Exercise.updateRelations({ _id: entry.id, values: relations });
+    return Plansheiko.updateRelations({ _id: entry.id, values: relations });
   },
 
   /**
-   * Promise to edit a/an exercise.
+   * Promise to edit a/an plansheiko.
    *
    * @return {Promise}
    */
 
   edit: async (params, values) => {
     // Extract values related to relational data.
-    const relations = _.pick(values, Exercise.associations.map(a => a.alias));
-    const data = _.omit(values, Exercise.associations.map(a => a.alias));
+    const relations = _.pick(values, Plansheiko.associations.map(a => a.alias));
+    const data = _.omit(values, Plansheiko.associations.map(a => a.alias));
 
     // Update entry with no-relational data.
-    const entry = await Exercise.updateOne(params, data, { multi: true });
+    const entry = await Plansheiko.updateOne(params, data, { multi: true });
 
     // Update relational data and return the entry.
-    return Exercise.updateRelations(Object.assign(params, { values: relations }));
+    return Plansheiko.updateRelations(Object.assign(params, { values: relations }));
   },
 
   /**
-   * Promise to remove a/an exercise.
+   * Promise to remove a/an plansheiko.
    *
    * @return {Promise}
    */
 
   remove: async params => {
     // Select field to populate.
-    const populate = Exercise.associations
+    const populate = Plansheiko.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
     // Note: To get the full response of Mongo, use the `remove()` method
     // or add spent the parameter `{ passRawResult: true }` as second argument.
-    const data = await Exercise
+    const data = await Plansheiko
       .findOneAndRemove(params, {})
       .populate(populate);
 
@@ -128,7 +128,7 @@ module.exports = {
     }
 
     await Promise.all(
-      Exercise.associations.map(async association => {
+      Plansheiko.associations.map(async association => {
         if (!association.via || !data._id) {
           return true;
         }
@@ -149,22 +149,22 @@ module.exports = {
   },
 
   /**
-   * Promise to search a/an exercise.
+   * Promise to search a/an plansheiko.
    *
    * @return {Promise}
    */
 
   search: async (params) => {
     // Convert `params` object to filters compatible with Mongo.
-    const filters = strapi.utils.models.convertParams('exercise', params);
+    const filters = strapi.utils.models.convertParams('plansheiko', params);
     // Select field to populate.
-    const populate = Exercise.associations
+    const populate = Plansheiko.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
-    const $or = Object.keys(Exercise.attributes).reduce((acc, curr) => {
-      switch (Exercise.attributes[curr].type) {
+    const $or = Object.keys(Plansheiko.attributes).reduce((acc, curr) => {
+      switch (Plansheiko.attributes[curr].type) {
         case 'integer':
         case 'float':
         case 'decimal':
@@ -188,7 +188,7 @@ module.exports = {
       }
     }, []);
 
-    return Exercise
+    return Plansheiko
       .find({ $or })
       .sort(filters.sort)
       .skip(filters.start)

@@ -1,29 +1,29 @@
 {
   "connection": "default",
-  "collectionName": "exercise",
+  "collectionName": "plansheiko",
   "info": {
-    "name": "exercise",
+    "name": "plansheiko",
     "description": ""
   },
   "options": {
     "timestamps": true
   },
   "attributes": {
-    "name": {
+    "user": {
+      "model": "user",
+      "plugin": "users-permissions"
+    },
+    "squats": {
       "default": "",
       "type": "string"
     },
-    "isDone": {
-      "default": false,
-      "type": "boolean"
-    },
-    "sets": {
+    "deadlift": {
       "default": "",
       "type": "string"
     },
-    "workout": {
-      "model": "workout",
-      "via": "exercises"
+    "press": {
+      "default": "",
+      "type": "string"
     }
   }
 }
