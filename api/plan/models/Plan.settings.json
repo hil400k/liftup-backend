@@ -34,6 +34,10 @@
     "tags": {
       "default": "",
       "type": "string"
+    },
+    "isOriginal": {
+      "default": false,
+      "type": "boolean"
     }
   }
 }
