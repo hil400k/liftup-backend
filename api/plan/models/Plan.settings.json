@@ -38,6 +38,10 @@
     "isOriginal": {
       "default": false,
       "type": "boolean"
+    },
+    "description": {
+      "default": "",
+      "type": "text"
     }
   }
 }
